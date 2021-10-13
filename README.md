@@ -246,3 +246,7 @@ populating tables.
 ```bash
  $ <build root>/testdb/testdb
 ```
+
+## References
+
+- [Ascii art gen](https://patorjk.com/software/taag)

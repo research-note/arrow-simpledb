@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <tables/DBTable.h>
 #include "Tables.h"
@@ -224,5 +223,3 @@ Tables::createChunkedDictionaryColumnsWithNulls(std::shared_ptr<db::DBTable>& ta
 
     return db::Status::OK();
 }
-
-

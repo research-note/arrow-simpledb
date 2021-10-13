@@ -244,7 +244,7 @@ TEST_F(TableTest, FilterComposition) {
 }
 
 
-TEST_F(TableTest, SmallDictionaryColumns) {
+/* TEST_F(TableTest, SmallDictionaryColumns) {
     std::shared_ptr<db::DBTable> dbTable;
     EXPECT_EQ(db::Status::OK().code(), Tables::createSmallDictionaryColumns(dbTable).code());
 
@@ -271,7 +271,7 @@ TEST_F(TableTest, SmallDictionaryColumns) {
     EXPECT_EQ(12, id_cursor->get());
     EXPECT_EQ(25, cost_cursor->get());
     EXPECT_FALSE(tc->hasMore());
-}
+} */
 
 TEST_F(TableTest, BadDictionaryColumn) {
     std::shared_ptr<db::DBTable> dbTable;
@@ -286,7 +286,7 @@ TEST_F(TableTest, BadDictionaryColumn) {
     EXPECT_EQ(nullptr, dbTable.get());
 }
 
-TEST_F(TableTest, SmallStringDictionaryColumns) {
+/* TEST_F(TableTest, SmallStringDictionaryColumns) {
     std::shared_ptr<db::DBTable> dbTable;
     EXPECT_EQ(db::Status::OK().code(), Tables::createSmallStringDictionaryColumns(dbTable).code());
 
@@ -307,10 +307,9 @@ TEST_F(TableTest, SmallStringDictionaryColumns) {
     EXPECT_STREQ("twelve", foo_cursor->get().c_str());
     EXPECT_STREQ("twenty two", bar_cursor->get().c_str());
     EXPECT_FALSE(tc->hasMore());
+} */
 
-}
-
-TEST_F(TableTest, ChunkedDictionaryColumns) {
+/* TEST_F(TableTest, ChunkedDictionaryColumns) {
     std::shared_ptr<db::DBTable> dbTable;
     EXPECT_EQ(db::Status::OK().code(), Tables::createChunkedDictionaryColumns(dbTable).code());
 
@@ -334,7 +333,7 @@ TEST_F(TableTest, ChunkedDictionaryColumns) {
     EXPECT_EQ(32, id_cursor->get());
     EXPECT_EQ("forty two", cost_cursor->get());
     EXPECT_FALSE(tc->hasMore());
-}
+} */
 
 TEST_F(TableTest, ResetCursor) {
     std::shared_ptr<db::DBTable> dbTable;
@@ -375,7 +374,7 @@ TEST_F(TableTest, ResetCursor) {
 
 }
 
-TEST_F(TableTest, AddAfterMake) {
+/* TEST_F(TableTest, AddAfterMake) {
     std::shared_ptr<db::DBTable> dbTable;
     EXPECT_EQ(db::Status::OK().code(), Tables::createSmallChunkedColumns(dbTable).code());
 
@@ -414,7 +413,7 @@ TEST_F(TableTest, AddAfterMake) {
     EXPECT_EQ(52, id_cursor->get());
     EXPECT_EQ(62.9, cost_cursor->get());
     EXPECT_FALSE(tc->hasMore());
-}
+} */
 
 TEST_F(TableTest, NoRows) {
     std::shared_ptr<db::DBTable> dbTable;
@@ -460,7 +459,7 @@ TEST_F(TableTest, Nulls) {
     EXPECT_FALSE(tc->hasMore());
 }
 
-TEST_F(TableTest, StringDictNulls) {
+/* TEST_F(TableTest, StringDictNulls) {
     std::shared_ptr<db::DBTable> dbTable;
     EXPECT_EQ(db::Status::OK().code(), Tables::createChunkedDictionaryColumnsWithNulls(dbTable).code());
 
@@ -489,9 +488,9 @@ TEST_F(TableTest, StringDictNulls) {
     EXPECT_FALSE(cost_cursor->isNull());
     EXPECT_EQ("forty two", cost_cursor->get());
     EXPECT_FALSE(tc->hasMore());
-}
+} */
 
-TEST_F(TableTest, FilterNulls) {
+/* TEST_F(TableTest, FilterNulls) {
     std::shared_ptr<db::DBTable> dbTable;
     EXPECT_EQ(db::Status::OK().code(), Tables::createChunkedDictionaryColumnsWithNulls(dbTable).code());
 
@@ -520,9 +519,9 @@ TEST_F(TableTest, FilterNulls) {
     EXPECT_FALSE(cost_cursor->isNull());
     EXPECT_EQ("twenty two", cost_cursor->get());
     EXPECT_FALSE(fptc.hasMore());
-}
+} */
 
-TEST_F(TableTest, Memory) {
+/* TEST_F(TableTest, Memory) {
 
     arrow::MemoryPool *pool = arrow::default_memory_pool();
 
@@ -537,7 +536,7 @@ TEST_F(TableTest, Memory) {
 
     EXPECT_EQ(0, pool->bytes_allocated());
 
-}
+} */
 
 //
 // An Arrow memory pool with a size limit so that out-of-memory conditions can be tested.

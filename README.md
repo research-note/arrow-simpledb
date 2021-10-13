@@ -71,14 +71,18 @@ Install using Homebrew.
 
 # C++ Headers
 
-    // The following also pulls int he crucial "columns/DBSchema.h"
+The following also pulls int he crucial "columns/DBSchema.h"
+
+```C++
     #include "tables/DBTable.h"
+```
 
 # Creating and Populating Tables
 
 The `DBTable` class encapsulates an Arrow table together with additional metadata, such as column encodings.
 The following example creates two columns: `id` of type `long` and `cost` of type `double`.
 
+```C++
     std::shared_ptr<db::DBTable> dbTable;
 
     db::Status status = db::DBTable::create(
@@ -91,6 +95,7 @@ The following example creates two columns: `id` of type `long` and `cost` of typ
     table->addRow({db::long_val(12), db::double_val(22.9)});
 
     table->make();
+```
 
 The call to `make()` prepares the table for use.
 Specify `db::ColumnEncoding::DICT` to make a the corresponding column dictionary encoded (not supported for double.)
@@ -99,6 +104,7 @@ Optional calls to `endChunk()` causes the underlying columns to be broken into m
 the current chunk for each column and begins a new one. In the following example, each column has two chunks of
 two values each.
 
+```C++
     std::shared_ptr<db::DBTable> dbTable;
 
     db::Status status = db::DBTable::create(
@@ -116,7 +122,7 @@ two values each.
     table->addRow({db::long_val(32), db::double_val(42.9)});
 
     table->make();
-
+```
 
 # Querying Tables
 
@@ -127,6 +133,7 @@ outermost `TableCursor` to obtain a `GenericColumnCursor`.
 
 For example, a scan cursor can be used to simply scan a table:
 
+```C++
     std::shared_ptr<db::TableCursor> tc = table->getScanCursor();
 
     // get pointers to two columns named "id" and "cost"
@@ -139,6 +146,7 @@ For example, a scan cursor can be used to simply scan a table:
             std::endl;
         //
     }
+```
 
 Note that column cursors are automatically positioned by the table cursor's position when thay are accessed,
 so any column (or part of a column) that is not needed for a query will not receive any memory accesses
@@ -146,6 +154,7 @@ when the query is executed.
 
 Additionally, a filtering and projection cursor can be composed to fetch certain rows:
 
+```C++
     std::shared_ptr<db::TableCursor> tc = table->getScanCursor();
 
     std::shared_ptr<db::Filter> leftFilter =
@@ -164,9 +173,11 @@ Additionally, a filtering and projection cursor can be composed to fetch certain
     while (fptc.hasMore()) {
         // ...
     }
+```
 
 Table cursors can be composed arbitrarily:
 
+```C++
     std::shared_ptr<db::TableCursor> tc = dbTable->getScanCursor();
 
     std::shared_ptr<db::Filter> first_filter =
@@ -176,6 +187,7 @@ Table cursors can be composed arbitrarily:
     std::shared_ptr<db::Filter> second_filter =
         std::make_shared<db::LessThanFilter<db::DoubleType>>("cost", 42);
     db::FilterProjectTableCursor second_cursor(first_cursor, second_filter);
+```
 
 ## Null values
 
@@ -219,14 +231,16 @@ populating tables.
 
 # Building
 
-    $ mkdir <build root>
-    $ cd <build root>
-    $ cmake <source root> -DCMAKE_BUILD_TYPE=Debug -DGTEST_ROOT=<googletest root> -DARROW_ROOT=<arrow root>
-    $ make clean
-    $ make
+```bash
+ $ mkdir <build root>
+ $ cd <build root>
+ $ cmake <source root> -DCMAKE_BUILD_TYPE=Debug -DGTEST_ROOT=<googletest root> -DARROW_ROOT=<arrow root>
+ $ make clean
+ $ make
+```
 
 # Running Tests
 
-    $ <build root>/testdb/testdb
-
-
+```bash
+ $ <build root>/testdb/testdb
+```

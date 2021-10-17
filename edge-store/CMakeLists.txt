@@ -10,6 +10,6 @@ find_package(Arrow REQUIRED)
 #   HINTS /usr/lib/x86_64-linux-gnu
 #   REQUIRED)
 
-add_executable(store store.cc)
+add_executable(main main.cc)
 
-target_link_libraries(store libdb arrow_shared)
+target_link_libraries(main lib arrow_shared)

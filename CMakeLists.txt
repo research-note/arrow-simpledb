@@ -13,6 +13,6 @@ set(ARROW_ROOT "" CACHE PATH "Apache Arrow root directory")
 set(ARROW_INCLIDE_DIRS ${ARROW_ROOT}/cpp/src)
 set(ARROW_LINK_DIRS ${ARROW_ROOT}/cpp/release/release)
 
-ADD_SUBDIRECTORY(libdb)
+ADD_SUBDIRECTORY(lib)
 ADD_SUBDIRECTORY(testdb)
 ADD_SUBDIRECTORY(edge-store)

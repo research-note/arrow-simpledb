@@ -10,8 +10,8 @@ find_package(Arrow REQUIRED)
 #   HINTS /usr/lib/x86_64-linux-gnu
 #   REQUIRED)
 
-add_executable(testdb TableTest.cpp main.cpp Tables.cpp)
+add_executable(testdb TableTest.cc main.cc Tables.cc)
 
-target_link_libraries(testdb libgtest.a libdb gtest arrow_shared)
+target_link_libraries(testdb libgtest.a lib gtest arrow_shared)
 
 install(TARGETS testdb DESTINATION bin)

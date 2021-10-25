@@ -1,7 +1,5 @@
-
-
 #include "core/DBSchema.hpp"
-#include "FilterProjectTableCursor.hpp"
+#include "tables/FilterProjectTableCursor.hpp"
 #include "filters/Filter.hpp"
 #include "columns/BaseColumnCursor.hpp"
 

@@ -1,9 +1,8 @@
-
-
 #ifndef ANDFILTER_H
 #define ANDFILTER_H
 
 #include <string>
+
 #include "filters/Filter.hpp"
 #include "tables/TableCursor.hpp"
 

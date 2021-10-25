@@ -1,7 +1,6 @@
-
-
 #include <iostream>
-#include "ChunkedDictColumnCursor.hpp"
+
+#include "columns/ChunkedDictColumnCursor.hpp"
 #include "core/DBSchema.hpp"
 
 using arrow::Int64Type;

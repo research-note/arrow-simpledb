@@ -1,5 +1,3 @@
-
-
 #ifndef GENERIC_COLUMN_CURSOR_H
 #define GENERIC_COLUMN_CURSOR_H
 

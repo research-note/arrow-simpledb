@@ -1,10 +1,9 @@
-
-
 #ifndef CHUNKEDDICTCOLUMNCURSOR_H
 #define CHUNKEDDICTCOLUMNCURSOR_H
 
 #include <arrow/table.h>
-#include "BaseColumnCursor.hpp"
+
+#include "columns/BaseColumnCursor.hpp"
 
 
 namespace db {

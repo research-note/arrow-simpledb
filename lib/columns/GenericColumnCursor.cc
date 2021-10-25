@@ -1,7 +1,4 @@
-
-
 #include "columns/GenericColumnCursor.hpp"
-
 #include "tables/TableCursor.hpp"
 
 using namespace db;

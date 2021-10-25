@@ -1,5 +1,3 @@
-
-
 #ifndef DB_SCHEMA_H
 #define DB_SCHEMA_H
 

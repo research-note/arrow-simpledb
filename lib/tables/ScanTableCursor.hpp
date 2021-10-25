@@ -1,13 +1,12 @@
-
-
 #ifndef SCAN_TABLE_CURSOR_H
 #define SCAN_TABLE_CURSOR_H
 
 #include <unordered_map>
 #include <arrow/table.h>
+
 #include "columns/BaseColumnCursor.hpp"
 #include "columns/GenericColumnCursor.hpp"
-#include "TableCursor.hpp"
+#include "tables/TableCursor.hpp"
 #include "core/DBSchema.hpp"
 
 namespace db {

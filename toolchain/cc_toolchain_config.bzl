@@ -84,7 +84,7 @@ def _impl(ctx):
                                 "-Og",
                                 "-Wall",
                                 "-ltbb",
-                                # "-larrow_shared",
+                                "-larrow_shared",
                                 "-lgtest",
                             ],
                         ),

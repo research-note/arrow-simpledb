@@ -1,9 +1,9 @@
-
 #include <memory>
-#include "BaseColumnCursor.hpp"
+
+#include "columns/BaseColumnCursor.hpp"
 #include "core/DBSchema.hpp"
-#include "ChunkedColumnCursor.hpp"
-#include "ChunkedDictColumnCursor.hpp"
+#include "columns/ChunkedColumnCursor.hpp"
+#include "columns/ChunkedDictColumnCursor.hpp"
 
 
 namespace db {

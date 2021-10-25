@@ -1,9 +1,9 @@
-
 #ifndef IS_NULL_FILTER_H
 #define IS_NULL_FILTER_H
 
 #include <string>
-#include "Filter.hpp"
+
+#include "filters/Filter.hpp"
 #include "tables/TableCursor.hpp"
 #include "columns/BaseColumnCursor.hpp"
 

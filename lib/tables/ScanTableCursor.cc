@@ -1,5 +1,4 @@
-
-#include "ScanTableCursor.hpp"
+#include "tables/ScanTableCursor.hpp"
 
 using namespace db;
 

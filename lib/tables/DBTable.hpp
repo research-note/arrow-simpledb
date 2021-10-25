@@ -1,18 +1,14 @@
-
-
 #ifndef DB_TABLE_H
 #define DB_TABLE_H
 
-
-#include <columns/GenericColumnCursor.hpp>
 #include <vector>
 #include <arrow/api.h>
 
+#include "columns/GenericColumnCursor.hpp"
 #include "core/Status.hpp"
 #include "core/DBSchema.hpp"
-
-#include "ScanTableCursor.hpp"
-#include "DBColumnBuilder.hpp"
+#include "tables/ScanTableCursor.hpp"
+#include "tables/DBColumnBuilder.hpp"
 
 namespace db {
 

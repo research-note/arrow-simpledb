@@ -10,8 +10,8 @@ endif()
 set(CMAKE_C_COMPILER /bin/clang-12 CACHE PATH "./")
 set(CMAKE_CXX_COMPILER /bin/clang++-12 CACHE PATH "./")
 
-# set(CMAKE_CXX_FLAGS "-Wall -Wextra -std=c++20 -pthread -ltbb")
-set(CMAKE_CXX_FLAGS "-Wall -Wextra -std=c++20 -pthread")
+# set(CMAKE_CXX_FLAGS "-Wall -Wextra -std=c++2a -pthread -ltbb")
+set(CMAKE_CXX_FLAGS "-Wall -Wextra -std=c++2a -pthread")
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 

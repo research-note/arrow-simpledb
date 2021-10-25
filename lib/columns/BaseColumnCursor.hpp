@@ -1,11 +1,10 @@
-
-
 #ifndef BASE_COLUMN_CURSOR_H
 #define BASE_COLUMN_CURSOR_H
 
 #include <memory>
 #include <arrow/api.h>
-#include "GenericColumnCursor.hpp"
+
+#include "columns/GenericColumnCursor.hpp"
 #include "core/DBSchema.hpp"
 
 namespace db {

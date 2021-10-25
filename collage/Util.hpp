@@ -5,8 +5,8 @@
  *
  */
 
-#ifndef EDGE_STORE_UTIL_HPP_
-#define EDGE_STORE_UTIL_HPP_
+#ifndef COLLAGE_UTIL_HPP_
+#define COLLAGE_UTIL_HPP_
 
 #include <vector>
 #include <optional>
@@ -27,4 +27,4 @@ private:
 
 #include "Util.cc"
 
-#endif  // EDGE_STORE_UTIL_HPP_
+#endif  // COLLAGE_UTIL_HPP_

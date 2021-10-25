@@ -1,7 +1,6 @@
-
-
 #include <arrow/api.h>
-#include "LessThanFilter.hpp"
+
+#include "filters/LessThanFilter.hpp"
 
 namespace db {
 

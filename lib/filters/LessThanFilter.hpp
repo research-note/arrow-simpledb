@@ -1,5 +1,3 @@
-
-
 #ifndef LESSTHANFILTER_H
 #define LESSTHANFILTER_H
 

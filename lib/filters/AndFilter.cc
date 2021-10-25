@@ -1,7 +1,6 @@
-
 #include <arrow/api.h>
 
-#include "AndFilter.hpp"
+#include "filters/AndFilter.hpp"
 
 using namespace db;
 

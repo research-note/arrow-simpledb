@@ -1,6 +1,5 @@
-
-
 #include <iostream>
+
 #include "DBTable.hpp"
 
 using arrow::Table;

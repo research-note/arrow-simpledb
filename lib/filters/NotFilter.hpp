@@ -1,11 +1,10 @@
-
-
 #ifndef NOT_FILTER_H
 #define NOT_FILTER_H
 
 #include <memory>
 #include <string>
-#include "Filter.hpp"
+
+#include "filters/Filter.hpp"
 
 namespace db {
 

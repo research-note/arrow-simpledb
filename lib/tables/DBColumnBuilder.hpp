@@ -1,5 +1,3 @@
-
-
 #ifndef DB_COLUMN_BUILDER_H
 #define DB_COLUMN_BUILDER_H
 

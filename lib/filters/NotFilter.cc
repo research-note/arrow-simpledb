@@ -1,6 +1,4 @@
-
-
-#include "NotFilter.hpp"
+#include "filters/NotFilter.hpp"
 
 using namespace db;
 

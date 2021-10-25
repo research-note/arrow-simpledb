@@ -1,6 +1,4 @@
-
-
-#include "IsNullFilter.hpp"
+#include "filters/IsNullFilter.hpp"
 
 namespace db {
 

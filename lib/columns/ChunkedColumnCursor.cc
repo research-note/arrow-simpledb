@@ -1,7 +1,6 @@
-
-
 #include <iostream>
-#include "ChunkedColumnCursor.hpp"
+
+#include "columns/ChunkedColumnCursor.hpp"
 #include "core/DBSchema.hpp"
 
 

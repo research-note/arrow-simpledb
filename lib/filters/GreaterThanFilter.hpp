@@ -1,9 +1,8 @@
-
-
 #ifndef GREATERTHANFILTER_H
 #define GREATERTHANFILTER_H
 
 #include <string>
+
 #include "filters/Filter.hpp"
 #include "tables/TableCursor.hpp"
 #include "columns/BaseColumnCursor.hpp"

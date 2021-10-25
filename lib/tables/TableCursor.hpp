@@ -1,14 +1,11 @@
-
-
 #ifndef TABLE_CURSOR_H
 #define TABLE_CURSOR_H
 
-
 #include <cstdint>
 #include <memory>
-
 #include <arrow/api.h>
-#include <core/DBSchema.hpp>
+
+#include "core/DBSchema.hpp"
 
 namespace db {
 

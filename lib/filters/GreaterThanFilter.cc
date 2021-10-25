@@ -1,7 +1,7 @@
 
 #include <arrow/api.h>
 
-#include "GreaterThanFilter.hpp"
+#include "filters/GreaterThanFilter.hpp"
 
 namespace db {
 

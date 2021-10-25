@@ -1,10 +1,8 @@
-
-
 #ifndef FILTER_PROJECT_TABLECURSOR_H
 #define FILTER_PROJECT_TABLECURSOR_H
 
-#include "TableCursor.hpp"
-#include <core/DBSchema.hpp>
+#include "tables/TableCursor.hpp"
+#include "core/DBSchema.hpp"
 
 namespace db {
 

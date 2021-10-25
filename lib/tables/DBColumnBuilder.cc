@@ -1,10 +1,9 @@
-
-
 #include <iostream>
-#include <columns/GenericColumnCursor.hpp>
-#include <core/DBSchema.hpp>
-#include <core/Status.hpp>
-#include "DBColumnBuilder.hpp"
+
+#include "columns/GenericColumnCursor.hpp"
+#include "core/DBSchema.hpp"
+#include "core/Status.hpp"
+#include "tables/DBColumnBuilder.hpp"
 
 using namespace db;
 

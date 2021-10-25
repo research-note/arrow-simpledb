@@ -17,8 +17,8 @@ To use our ```lib``` libary, an extra dependency is added in the form of //path/
 
 ```
 cc_binary(
-    name = "store",
-    srcs = ["store.cc"],
+    name = "main",
+    srcs = ["main.cc"],
     deps = [
         ":bin",
         "//lib:lib",
@@ -28,9 +28,9 @@ cc_binary(
 
 To build this example you use (notice that 3 slashes are required in windows)
 ```
-bazel build --config=clang_config //store:store
+bazel build --config=clang_config //collage:main
 
 # In Windows, note the three slashes
 
-bazel build --config=clang_config ///store:store
+bazel build --config=clang_config ///collage:main
 ```

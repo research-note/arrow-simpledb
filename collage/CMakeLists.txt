@@ -1,4 +1,4 @@
-project(edge-store)
+project(collage)
 
 set(EDGE_STORE_ROOT "" CACHE PATH "Edge Store root directory")
 

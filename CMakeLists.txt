@@ -5,7 +5,13 @@ if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
 endif()
 
-set(CMAKE_CXX_FLAGS "-Wall -Wextra -std=c++17 -pthread")
+# set(CMAKE_C_COMPILER /bin/gcc-10 CACHE PATH "./")
+# set(CMAKE_CXX_COMPILER /bin/g++-10 CACHE PATH "./")
+set(CMAKE_C_COMPILER /bin/clang-12 CACHE PATH "./")
+set(CMAKE_CXX_COMPILER /bin/clang++-12 CACHE PATH "./")
+
+# set(CMAKE_CXX_FLAGS "-Wall -Wextra -std=c++20 -pthread -ltbb")
+set(CMAKE_CXX_FLAGS "-Wall -Wextra -std=c++20 -pthread")
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
@@ -14,5 +20,5 @@ set(ARROW_INCLIDE_DIRS ${ARROW_ROOT}/cpp/src)
 set(ARROW_LINK_DIRS ${ARROW_ROOT}/cpp/release/release)
 
 ADD_SUBDIRECTORY(lib)
-ADD_SUBDIRECTORY(testdb)
-ADD_SUBDIRECTORY(edge-store)
+ADD_SUBDIRECTORY(test)
+ADD_SUBDIRECTORY(collage)

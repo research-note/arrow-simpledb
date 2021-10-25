@@ -12,23 +12,26 @@ include_directories(${ARROW_INCLIDE_DIRS})
 link_directories(${ARROW_LINK_DIRS})
 
 set(SOURCE_FILES
-    columns/BaseColumnCursor.hpp
-    columns/ChunkedColumnCursor.cc
-    columns/ChunkedDictColumnCursor.cc
-    tables/ScanTableCursor.cc
-    columns/GenericColumnCursor.cc tables/TableCursor.cc
-    tables/FilterProjectTableCursor.cc
+    columns/BaseColumnCursor.hpp columns/BaseColumnCursor.cc
+    columns/ChunkedColumnCursor.hpp columns/ChunkedColumnCursor.cc
+    columns/ChunkedDictColumnCursor.hpp columns/ChunkedDictColumnCursor.cc
+    columns/GenericColumnCursor.hpp columns/GenericColumnCursor.cc
+
+    core/DBSchema.hpp core/DBSchema.cc core/Status.hpp
+
+    filters/AndFilter.hpp filters/AndFilter.cc
     filters/Filter.hpp
-    filters/GreaterThanFilter.cc filters/GreaterThanFilter.hpp
-    filters/LessThanFilter.cc filters/LessThanFilter.hpp
-    filters/AndFilter.cc filters/AndFilter.hpp
-    tables/DBTable.cc tables/DBTable.hpp
-    tables/DBColumnBuilder.cc tables/DBColumnBuilder.hpp
-    core/DBSchema.hpp core/DBSchema.cc
-    filters/IsNullFilter.cc filters/IsNullFilter.hpp
-    filters/NotFilter.cc filters/NotFilter.hpp
-    columns/BaseColumnCursor.cc
-    core/Status.hpp)
+    filters/GreaterThanFilter.hpp filters/GreaterThanFilter.cc
+    filters/IsNullFilter.hpp filters/IsNullFilter.cc
+    filters/LessThanFilter.hpp filters/LessThanFilter.cc
+    filters/NotFilter.hpp filters/NotFilter.cc
+
+    tables/DBColumnBuilder.hpp tables/DBColumnBuilder.cc
+    tables/DBTable.hpp tables/DBTable.cc
+    tables/FilterProjectTableCursor.hpp tables/FilterProjectTableCursor.cc
+    tables/ScanTableCursor.hpp tables/ScanTableCursor.cc
+    tables/TableCursor.hpp tables/TableCursor.cc
+    )
 
 add_library(lib STATIC ${SOURCE_FILES})
 

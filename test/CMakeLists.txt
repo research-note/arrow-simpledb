@@ -1,4 +1,4 @@
-project(testdb)
+project(test)
 
 set(GTEST_ROOT "" CACHE PATH "GoogleTest root directory")
 

@@ -1,5 +1,5 @@
 
-project(lib)
+project(libcollage)
 
 MESSAGE(STATUS "Arrow root = " ${ARROW_ROOT})
 
@@ -33,8 +33,8 @@ set(SOURCE_FILES
     tables/TableCursor.hpp tables/TableCursor.cc
     )
 
-add_library(lib STATIC ${SOURCE_FILES})
+add_library(collage STATIC ${SOURCE_FILES})
 
-target_link_libraries(lib ${ARROW_LIBS} ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(collage ${ARROW_LIBS} ${CMAKE_THREAD_LIBS_INIT})
 
-target_include_directories(lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(collage PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

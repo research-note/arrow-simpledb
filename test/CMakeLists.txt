@@ -12,6 +12,6 @@ find_package(Arrow REQUIRED)
 
 add_executable(testdb TableTest.cc main.cc Tables.cc)
 
-target_link_libraries(testdb libgtest.a lib gtest arrow_shared)
+target_link_libraries(testdb libgtest.a collage gtest arrow_shared)
 
 install(TARGETS testdb DESTINATION bin)

@@ -12,7 +12,7 @@ cc_test(
     srcs = ["test/TableTest.cc"],
     deps = [
         "@gtest//:gtest_main", # gtest_main already contains gtest
-        ":library"
+        "//libcollage:lib",
     ],
 )
 
@@ -21,6 +21,6 @@ cc_binary(
     srcs = ["main.cc"],
     deps = [
         ":bin",
-        "//lib:lib",
+        "//libcollage:lib",
     ],
 )

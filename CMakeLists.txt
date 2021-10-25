@@ -19,6 +19,6 @@ set(ARROW_ROOT "" CACHE PATH "Apache Arrow root directory")
 set(ARROW_INCLIDE_DIRS ${ARROW_ROOT}/cpp/src)
 set(ARROW_LINK_DIRS ${ARROW_ROOT}/cpp/release/release)
 
-ADD_SUBDIRECTORY(lib)
+ADD_SUBDIRECTORY(libcollage)
 ADD_SUBDIRECTORY(test)
 ADD_SUBDIRECTORY(collage)

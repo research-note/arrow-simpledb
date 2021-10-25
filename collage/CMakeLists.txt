@@ -12,4 +12,4 @@ find_package(Arrow REQUIRED)
 
 add_executable(main main.cc)
 
-target_link_libraries(main lib arrow_shared)
+target_link_libraries(main collage arrow_shared)
